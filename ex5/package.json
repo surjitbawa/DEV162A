@@ -1,0 +1,18 @@
+{
+  "name": "chatServer",
+  "description": "DEV162 Exercise 5 - Chat Server via Web Sockets",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.x"   
+  },
+  "dependencies": {
+    "express": "^4.12.0",
+    "async": "latest",
+    "extend": "latest",
+    "ws": "latest"
+  },  
+  "scripts": {
+    "start": "node chatServer.js"
+  }  
+}

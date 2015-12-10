@@ -1,0 +1,19 @@
+{
+  "name": "textBundle",
+  "description": "DEV162 Exercise 4a - Text Bundles",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.12.0",
+    "async": "latest",
+    "extend": "latest",
+    "sap-textbundle": "latest",
+    "accept-language-parser": "latest"    
+  },
+  "engines": {
+    "node": ">=0.10.x"   
+  },
+  "scripts": {
+    "start": "node textBundle.js"
+  }  
+}

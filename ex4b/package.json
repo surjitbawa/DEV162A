@@ -1,0 +1,18 @@
+{
+  "name": "SimpleDB",
+  "description": "DEV162 Exercise 4b - Simple DB Example",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.12.0",
+    "async": "latest",
+    "extend": "latest",
+    "sap-hdb-connection": "latest"        
+  },
+  "engines": {
+    "node": ">=0.10.x"   
+  },
+  "scripts": {
+    "start": "node partnerList.js"
+  }  
+}

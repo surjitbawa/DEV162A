@@ -1,0 +1,56 @@
+---
+applications:
+- name: DEV162
+  path: web
+  port: 49015
+  env:
+    destinations: >
+      [
+        {"name":"ex3", 
+         "url":"https://mo-6863688bc.mo.sap.corp:49018", 
+         "forwardAuthToken": true},
+        {"name":"ex4c", 
+         "url":"https://mo-6863688bc.mo.sap.corp:49021", 
+         "forwardAuthToken": true},   
+        {"name":"ex5", 
+         "url":"https://mo-6863688bc.mo.sap.corp:49022", 
+         "forwardAuthToken": true},                
+        {"name":"ui5", 
+         "url":"http://mo-6863688bc.mo.sap.corp:8000/sap/ui5/1/"}        
+      ]  
+  services:
+    - dev162-uaa   
+
+- name: DEV162-ex1
+  path: ex1
+  port: 49016
+ 
+- name: DEV162-ex2
+  path: ex2
+  port: 49017 
+
+- name: DEV162-ex3
+  path: ex3
+  port: 49018   
+
+- name: DEV162-ex4a
+  path: ex4a
+  port: 49019     
+
+- name: DEV162-ex4b
+  path: ex4b
+  port: 49020    
+
+- name: DEV162-ex5
+  path: ex5
+  port: 49022
+
+- name: DEV162-ex4c
+  path: ex4c
+  port: 49021   
+  services:
+    - dev162-hdi-container
+    - dev162-uaa       
+  env:
+    HANA_SERVICE_NAME: dev162-hdi-container
+    UAA_SERVICE_NAME: dev162-uaa      

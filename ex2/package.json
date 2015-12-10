@@ -1,0 +1,15 @@
+{
+  "name": "HelloWorldWeb",
+  "description": "DEV162 Exercise 2 - Hello World Web Example",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.12.0"     
+  },
+  "engines": {
+    "node": ">=0.10.x"   
+  },
+  "scripts": {
+    "start": "node helloWeb4.js"
+  }  
+}

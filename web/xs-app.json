@@ -1,0 +1,31 @@
+{
+  "welcomeFile": "index.html",
+  "securityConstraints": [
+    {
+      "permission": "none"
+    }
+  ],
+"routes": [
+    {
+      "source": "/sap/ui5/1(.*)",
+      "target": "$1",
+      "destination": "ui5"
+    },  
+    {
+      "source": "/exercise3/ex3(.*)",
+      "target": "/",
+      "destination": "ex3",
+      "csrfProtection": false
+    },
+    {
+      "source": "(.*)(.xsjs)",
+      "destination": "ex4c"
+    },
+    {
+      "source": "/exercise5/ex5(.*)",
+      "target": "/",
+      "destination": "ex5",
+      "csrfProtection": false      
+    }         
+  ]
+}

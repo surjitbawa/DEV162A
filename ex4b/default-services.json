@@ -1,0 +1,9 @@
+{
+       "hana": {
+        "host"            : "mo-6863688bc.mo.sap.corp",
+        "port"            : "30015",
+        "user"            : "SYSTEM",
+        "password"        : "Toor1234",
+        "schema"          : "SYSTEM"
+    }
+}
