@@ -1,30 +1,13 @@
-var http = require('http')
+var http = require('https')
+var url = "https://www.loc.gov/pictures/search/?fo=json&q=SAP&";
 
-module.exports = {
-   callService: function(wss){
+console.log("Before HTTP Call\n");
 
-wss.broadcast("Before HTTP Call\n");
-/*http.get(
-	{path: "http://www.loc.gov/pictures/search/?fo=json&q=SAP&",
-     host: "www.loc.gov",
-     port: "80",
-     headers: {
-     	host: "www.loc.gov"
-     }}, */
-http.get(
-	{path: "http://www.loc.gov/pictures/search/?fo=json&q=SAP&",
-     host: "proxy.wdf.sap.corp",
-     port: "8080",
-     headers: {
-     	host: "www.loc.gov"
-     }}, 
- function (response) {
+http.get(url,function (response) 
+ {
   response.setEncoding('utf8');
-  response.on('data', function(data){wss.broadcast(data.substring(0,100))});
-  response.on('error', wss.broadcast);
-});
-
-wss.broadcast("After HTTP Call\n");
-
- }
-}
+  response.on('data', console.log);
+  response.on('error', console.error);
+  }
+);
+console.log("After HTTP Call\n");
